@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — Richard Player</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f0f4ff, #d4e0ff);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .caixa-login {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 8px 30px rgba(0, 50, 200, 0.15);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            color: #0066ff;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .campo {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 2px solid #ccd6ff;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .campo:focus {
+            border-color: #0066ff;
+        }
+
+        .botao-login {
+            width: 100%;
+            background: linear-gradient(135deg, #0066ff, #0044cc);
+            color: white;
+            border: none;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .botao-login:hover {
+            transform: scale(1.03);
+        }
+
+        .mensagem-erro {
+            color: red;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .rodape {
+            margin-top: 25px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="caixa-login">
+        <div class="logo">🌍</div>
+        <h2>Acesse sua conta</h2>
+        
+        <input type="email" id="email" class="campo" placeholder="✉️ Seu e-mail">
+        <input type="password" id="senha" class="campo" placeholder="🔒 Sua senha">
+        
+        <button class="botao-login" onclick="entrar()">LOGIN</button>
+        
+        <p id="erro" class="mensagem-erro">Por favor, preencha tudo! ⚠️</p>
+        
+        <p class="rodape">Richard Player Beta © 2026</p>
+    </div>
+
+    <script>
+        function entrar() {
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+            
+            if (email == "" || senha == "") {
+                document.getElementById("erro").style.display = "block";
+            } else {
+                window.location.href = "index2.html";
+            }
+        }
+    </script>
+</body>
+</html>
